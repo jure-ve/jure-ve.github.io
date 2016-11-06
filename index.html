@@ -1,44 +1,530 @@
-<!doctype html>
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>jure</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-		<meta name="robots" content="all" />
-		<meta name="MSSmartTagsPreventParsing" content="true" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-		<style>
-			.jure-card-square.mdl-card {
-				margin-left: auto ;
-				margin-right: auto ;
-				margin-top: auto ;
-				margin-bottom: auto ;
-				width: 320px;
-				height: 320px;
-			}
-			.jure-card-square > .mdl-card__title {
-				color: #fff;
-				background: #4B0082;
-			}
-		</style>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	</head>
-	<body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<div class="jure-card-square mdl-card mdl-shadow--2dp">
-				<div class="mdl-card__title mdl-card--expand">
-					<h2 class="mdl-card__title-text">Julio R. Reyes G.</h2>
-				</div>
-				<div class="mdl-card__supporting-text">
-					<p>Apasionado de las nuevas tecnologías y me dedico profesionalmente al desarrollo de aplicaciones.</p>
-					<p>Trabajo en consultoría tecnológica y en aplicaciones/paginas web. Tengo experiencia en lenguajes como PHP, Python, Java y Javascript entre muchos otros.</p>
-					<p>Esta es mi página personal.</p>
-				</div>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y amo escribir código.">
+	<meta name="keywords" content="jure,jureve,desarrollador,programacion,web,php,python,javascript,aplicaciones,moviles, base de datos,analisis,linux">
+	<meta name="author" content="Jure">
+	<link rel="canonical" href="https://jure.org.ve/">
+	<link rel="icon"  type="image/x-icon" href="./imagenes/favicon.ico"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16x16.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="./imagenes/favicon-32x32.png"/>
+	<link rel="icon" type="image/png" sizes="96x96" href="./imagenes/favicon-96x96.png"/>
+	<meta name="robots" content="all" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@jure_ve">
+	<meta name="twitter:creator" content="@jure_ve">
+	<meta name="twitter:title" content="Julio R. Reyes G. ">
+	<meta name="twitter:description" content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y amo escribir código.">
+	<meta name="twitter:image" content="https://jure.org.ve/imagenes/jure-card.jpg">
+
+	<title>Julio R. Reyes G.</title>
+
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="/assets/js/html5shiv.min.js"></script>
+	<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="/assets/fonts/font-mfizz.css">
+	<style>
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "/assets/css/font-awesome.min.css";
+a,
+a:focus,
+a:hover {
+    color: #fff
+}
+html,
+body {
+    height: 100%;
+    background-color: #FBC02D;
+    font-family: 'Open Sans', sans-serif
+}
+body {
+    color: #000;
+    text-align: center
+}
+.container
+{
+    display:table;
+    width: 100%;
+}
+.row
+{
+    height: 100%;
+    display: table-row;
+}
+.col-sm-4
+{
+    display: table-cell;
+}
+.navbar-inverse {
+    background-color: #3F51B5;
+    border-color: #3F51B5
+}
+.navbar {
+    border-radius: 0;
+    color: #FFF
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: none
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-text,
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: navy
+}
+.bg3 {
+    margin: auto;
+    width: 80%
+}
+.text-navy {
+    color: navy
+}
+.text-green {
+    color: green
+}
+.text-orange {
+    color: #DD2C00
+}
+.first {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    background-image: url(/imagenes/jure.jpg);
+    min-height: 400px;
+    margin: 0;
+}
+.second {
+    background-color: #424242 !important;
+    height: 400px;
+    margin: 0;
+    padding: 10px;
+    display: table;
+}
+.third {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    background-image: url(/imagenes/fondo2.jpg); 
+    background-color: black !important;
+    min-height: 400px;
+    margin: 0;
+}
+.tb {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.article {
+    display: table-cell;
+    vertical-align: middle;
+    color: #FFF
+}
+.col-sm-4 {
+    padding-left: 15px;
+    padding-right: 15px
+}
+.section-title {
+    position: relative;
+    margin-bottom: 1em;
+    padding-top: .6em;
+    padding-bottom: .3em;
+    font-size: 180%;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #4A148C;
+    border-bottom: 1px solid #212121
+}
+.service {
+    margin: 0 0 1.8em;
+    text-align: left
+}
+.service i {
+    display: inline-block;
+    width: 50px;
+    line-height: 50px;
+    font-size: 46px;
+    border-radius: 50%;
+    text-align: left;
+    float: left;
+    text-align: center
+}
+.service p {
+    margin-top: .2em;
+    margin-left: 60px;
+    color: #212121;
+}
+.service h3 {
+    margin-top: 0;
+    margin-bottom: .4em;
+    margin-left: 60px;
+    font-size: 140%
+}
+.skill .col-sm-6 {
+    margin: 0;
+    padding: 0
+}
+.skill ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.skill ul li {
+    display: inline-block;
+    font-size: 240%;
+    line-height: 1;
+    margin: 5px 15px;
+    color: #004D40;
+}
+.skill-left {
+    text-align: left;
+}
+.skill-right {
+    text-align: right;
+}
+footer {
+    bottom: 0;
+    width: 100%;
+    color: #FFFF;
+    color: rgba(255, 255, 255, .5);
+    background: #3F51B5;
+    padding: 10px 0
+}
+footer .row {
+    padding: 0 20px
+}
+footer p.copy {
+    float: left;
+    display: block;
+}
+footer ul.social {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+footer ul.social li {
+    display: inline-block;
+    font-size: 160%;
+    line-height: 1;
+}
+@media (max-width: 980px) {
+    .bg3 {
+        width: 86%;
+    }
+    .first,
+    .second,
+    .third {
+        min-height: 600px;
+    }
+    .third {
+	background-position: center;
+    }
+    .col-sm-4 {
+        width: 100%;
+    }
+    .article {
+        font-size: 120%;
+    }
+    .service {
+        font-size: 120%;
+    }
+    .skill ul li {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    .first,
+    .second,
+    .third {
+        min-height: 770px;
+    }
+}
+
+@media (max-width: 640px) {
+    .bg3 {
+        width: 86%;
+    }
+    .col-sm-2,
+    .col-sm-5 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .article {
+        font-size: 120%;
+    }
+    .first {
+        min-height: 400px;
+        background-image: url(/imagenes/jure-movil.jpg);
+    }
+    .third {
+        background-image: none;
+        visibility: hidden;
+        min-height: 0;
+    }
+    .service {
+        font-size: 120%;
+    }
+    .skill-left,
+    .skill-right {
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .bg3 {
+        width: 94%;
+    }
+    .first {
+        min-height: 300px;
+    }
+    .service {
+        font-size: 100%;
+    }
+    footer p.copy {
+        float: none;
+        display: block;
+        font-size: 130%;
+    }
+    footer ul.social {
+        list-style-type: none;
+        float: none;
+    }
+    footer ul.social li {
+        font-size: 200%;
+        margin: 5px 15px;
+    }
+}
+
+.tooltip.top .tooltip-inner {
+    background-color: #E91E63;
+}
+.tooltip.top .tooltip-arrow {
+      border-top-color: #E91E63;
+}
+	</style>
+
+  </head>
+
+  <body>
+
+	<nav id="inicio" class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="https://jure.org.ve/" title="Julio R. Reyes G.">Jure</a> 
+		<p class="navbar-text navbar-right">Desarrollador</p>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav navbar-right">
+		<li class="active"><a href="https://jure.org.ve/" title="Julio R. Reyes G.">Home</a></li>
+		<li><a href="https://blog.jure.org.ve" title="Blog de Julio R. Reyes G.">Blog</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container-fluid text-center">    
+	  <div class="row bg3">
+	    <div class="col-sm-2">
+		<div class="first" data-toggle="tooltip" title="jure"></div>
+	    </div>
+	    <div class="col-sm-5"> 
+		<div class="second">
+			<div class="article">
+				<section itemscope itemtype="http://data-vocabulary.org/Person">
+					<h1 itemprop="name">Julio R. Reyes G.</h1><br/>
+					<p>
+					 Soy desarrollador, apasionado de las nuevas tecnologías. Amo escribir código y programar aplicaciones con diferentes habilidades profesionales que he obtenido a través de los años. Me gusta trabajar en equipo, se aprende más rápido y se garantizan mejores resultados. Soy de <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Venezuela</span></span>					 y trabajo actualmente como <span itemprop="jobTitle">Consultor Tecnológico</span>, destacándome en actividades como soporte técnico, innovación y programación en proyectos empresariales.
+ 					</p>
+					 <p>
+					   Este es mi <a href="https://jure.org.ve/" itemprop="url" title="Julio R. Reyes G.">sitio personal</a>.
+					 </p>
+					<p>
+					   También puedes encontrarme en:
+					   <span class="urls">
+						<a href="https://ve.linkedin.com/in/julioreyes" itemprop="url" title="linkedin de Julio R. Reyes G." data-toggle="tooltip"><i class="fa fa-linkedin"></i></a>
+						<a href="https://twitter.com/jure_ve" itemprop="url" title="twitter jure_ve" data-toggle="tooltip"><i class="fa fa-twitter"></i></a>
+						<a href="https://github.com/jure-ve" itemprop="url" title="github jure-ve" data-toggle="tooltip"> <i class="fa fa-github"></i></a>
+						<a href="https://plus.google.com/+JulioRReyesG" itemprop="url" rel="publisher" title="Google+ Julio R. Reyes G." data-toggle="tooltip"> <i class="fa fa-google-plus"></i></a>
+						<a href="https://jure.org.ve/" title="Julio R. Reyes G." data-toggle="tooltip"><img src="/imagenes/jure-firma.png" itemprop="image" width="16" alt="jure"></a>
+					   </span>
+					</p>
+
+
+				</section>
 			</div>
 		</div>
-		<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-	</body>
+	    </div>
+	    <div class="col-sm-5"> 
+	      	<div class="tb"><div class="third"></div></div>
+	    </div>
+	  </div>
+	</div>
+
+	 <div class="container-fluid bg3 text-center">
+	  <h2 class="section-title">Áreas de Interés Profesional</h2>
+	  <div class="row ">
+	    <div class="col-sm-12">
+		<div class="row service">
+		      <i class="fa fa-laptop text-orange"></i>
+		      <h3>Desarrollo de Aplicaciones</h3>
+		      <p>Tengo una amplia experiencia como programador Delphi, c++, C# y Java desarrollando e implementando componentes y aplicaciones personalizadas para los diferentes modelos de negocio como lo son el comercio, puntos de venta, logística, comunicaciones y otras industrias. Me especializado en el diseño de base de datos relacionales y desarrollo de procedimientos en SQL en varios sistema de administración  y gestión como SQL Server, MySQL/MariaDB y Firebird. Actualmente desarrollo aplicaciones Android. Tengo la habilidad para analizar los problemas y buscar las mejores soluciones para optimizar y gestionar procesos.</p>
+		</div>
+	    </div>
+	    <div class="col-sm-12">
+		<div class="row service">
+		      <i class="fa fa-globe text-navy"></i>
+		      <h3>Desarrollo Web</h3>
+		      <p>Soy desarrollador senior con amplio conocimiento de las técnicas front-end y back-end. He participado en numerosos proyectos de diseño, desarrollo e implementación de aplicaciones para el entorno web. Soy hábil para programar con lenguajes como PHP, Python y Javascript, ademas del uso de varios frameworks entre los que puedo mencionar Codeigniter, Symfony, Slim y Laravel para PHP, por el lado de Python podría nombrar web2py, flash, bottle y Django. También tengo experiencia con Express.js en el entorno Node.js. Experto en integración de código y buena capacidad para la resolución de problemas durante el desarrollo web. Me interesa especialmente la usabilidad y los estándares web.</p>
+		</div>
+	    </div>
+	    <div class="col-sm-12">
+		<div class="row service">
+		      <i class="fa fa-server text-green"></i>
+		      <h3>Administrador de Sistemas</h3>
+		      <p>Experiencia en la instalación, configuración, gestión, monitorización, respaldo y migración de sistemas basados en sistemas operativos Linux y Windows. Proyecto, implementación y puesta a punto de servidores y servicios web, base de datos, servidores de archivos, correo, redes, planes de seguridad y organización de directorios de usuarios y recursos. Análisis, simplificación y automatización de procesos mediante scrips en bash y powershell. Resguardo del correcto funcionamiento de servicios y planes de respaldo.</p>
+		</div>
+	    </div>
+	  </div>
+
+	 <div class="container-fluid bg3 text-center">
+	  <h2 class="section-title">Habilidades Profesionales</h2>
+	  <div class="row skill">
+		<div class="col-sm-6 skill-right">
+			<ul>
+				<li data-toggle="tooltip" title="Debian"><i class="icon-debian"></i><span class="hidden">debian</span></li>
+				<li data-toggle="tooltip" title="Ubuntu"><i class="icon-ubuntu"></i><span class="hidden">ubuntu</span></li>
+				<li data-toggle="tooltip" title="Centos"><i class="icon-centos"></i><span class="hidden">centos</span></li>
+				<li data-toggle="tooltip" title="MS Windows"><i class="fa fa-windows"></i><span class="hidden">windows</span></li>
+				<li data-toggle="tooltip" title="Servidor web Apache"><i class="icon-apache"></i><span class="hidden">apache</span></li>
+			</ul>
+		</div>
+		<div class="col-sm-6 skill-left">
+			<ul>
+				<li data-toggle="tooltip" title="Servidor web Nginx"><i class="icon-nginx"></i><span class="hidden">nginx</span></li>
+				<li data-toggle="tooltip" title="MS SQL Server"><i class="icon-mssql"></i><span class="hidden">mssql</span></li>
+				<li data-toggle="tooltip" title="MariaDB"><i class="icon-mariadb"></i><span class="hidden">mariadb</span></li>
+				<li data-toggle="tooltip" title="Mysql"><i class="icon-mysql"></i><span class="hidden">mysql</span></li>
+				<li data-toggle="tooltip" title="MongoDB"><i class="icon-mongodb"></i><span class="hidden">mongodb</span></li>
+			</ul>
+		</div>
+	    </div>
+	  <div class="row skill">
+		<div class="col-sm-6 skill-right">
+			<ul>
+				<li data-toggle="tooltip" title="HTML"><i class="fa fa-html5"></i><span class="hidden">html5</span></li>
+				<li data-toggle="tooltip" title="CSS"><i class="icon-css"></i><span class="hidden">css</span></li>
+				<li data-toggle="tooltip" title="Javascript"><i class="icon-javascript"></i><span class="hidden">javascript</span></li>
+				<li data-toggle="tooltip" title="PHP"><i class="icon-php"></i><span class="hidden">php</span></li>
+				<li data-toggle="tooltip" title="Python"><i class="icon-python"></i><span class="hidden">python</span></li>
+			</ul>
+		</div>
+		<div class="col-sm-6 skill-left">
+			<ul>
+				<li data-toggle="tooltip" title="Java"><i class="icon-java"></i><span class="hidden">java</span></li>
+				<li data-toggle="tooltip" title="Perl"><i class="icon-perl"></i><span class="hidden">perl</span></li>
+				<li data-toggle="tooltip" title="Consola de comandos"><i class="icon-shell"></i><span class="hidden">shell</span></li>
+				<li data-toggle="tooltip" title="Symfony framework "><i class="icon-symfony"></i><span class="hidden">symfony</span></li>
+				<li data-toggle="tooltip" title="Gestión de contenidos con Wordpress"><i class="icon-wordpress"></i><span class="hidden">wordpress</span></li>
+			</ul>
+		</div>
+	    </div>
+	  <div class="row skill">
+		<div class="col-sm-6 skill-right">
+			<ul>
+				<li data-toggle="tooltip" title="C plus plus"><i class="icon-cplusplus"></i><span class="hidden">c plus plus</span></li>
+				<li data-toggle="tooltip" title="C Sharp"><i class="icon-csharp"></i><span class="hidden">c sharp</span></li>
+				<li data-toggle="tooltip" title="Node.js"><i class="icon-nodejs"></i><span class="hidden">nodejs</span></li>
+				<li data-toggle="tooltip" title="Recursos Google Developers"><i class="icon-google-developers"></i><span class="hidden">google desarrolladores</span></li>
+				<li data-toggle="tooltip" title="Amazon Web Services (AWS)"><i class="icon-aws"></i><span class="hidden">aws</span></li>
+			</ul>
+		</div>
+		<div class="col-sm-6 skill-left">
+			<ul>
+				<li data-toggle="tooltip" title="Herramientas de Software"><i class="fa fa-wrench"></i><span class="hidden">wrench</span></li>
+				<li data-toggle="tooltip" title="Dispositivos móviles"><i class="icon-mobile-device"></i><span class="hidden">dispositivos moviles</span></li>
+				<li data-toggle="tooltip" title="Analisis de datos"><i class="icon-line-graph"></i><span class="hidden">graficos</span></li>
+				<li data-toggle="tooltip" title="Contenedores Docker"><i class="icon-docker"></i><span class="hidden">docker</span></li>
+				<li data-toggle="tooltip" title="Control de versiones con Git"><i class="icon-git"></i><span class="hidden">git</span></li>
+			</ul>
+		</div>
+	    </div>
+	  </div>
+          <br/><br/>
+	  <p><img class="img-circle" src="/imagenes/logo.png" alt="jure" data-toggle="tooltip" title="Julio R. Reyes G."></p>
+	</div>
+
+	<footer class="container-fluid text-center">
+		<div class="row">
+			<p><a href="https://jure.org.ve#inicio" title="Ir al Inicio" data-toggle="tooltip">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</a></p>
+			<p class="copy">
+				&copy; 2005 - 2016 Desarrollado por <span><a href="https://jure.org.ve/" title="Julio R. Reyes G." data-toggle="tooltip">Julio R. Reyes G.</a></span> con <i class="fa fa-heart" title="cariño" data-toggle="tooltip"></i>, <i class="fa fa-keyboard-o" title="código" data-toggle="tooltip"></i> y <i class="fa fa-coffee" title="café" data-toggle="tooltip"></i>
+			</p>
+
+				<ul class="social">
+					<li><a href="https://ve.linkedin.com/in/julioreyes" title="linkein Julio R. Reyes G." data-toggle="tooltip"> <i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://twitter.com/jure_ve" title="Twitter @jure_ve" data-toggle="tooltip"> <i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://github.com/jure-ve" title="GitHub jure-ve" data-toggle="tooltip"> <i class="fa fa-github"></i></a></li>
+					<li><a href="https://plus.google.com/+JulioRReyesG?rel=author" title="Google+ Julio R. Reyes G." data-toggle="tooltip"> <i class="fa fa-google-plus"></i></a></li>
+				</ul>
+		</div>
+		<div class="row">
+			<p>Hospedado en <a href="https://pages.github.com/" title="GitHub Pages" data-toggle="tooltip">GitHub Pages</a></p>
+			<br/>
+		</div>
+	</footer>
+		<script src="/assets/js/jquery-1.12.4.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
+		<script>
+$(document).ready(function() {
+    $("footer a[href='#inicio']").on("click", function(a) {
+        a.preventDefault();
+        var b = this.hash;
+        "none" != $(".navbar-toggle").css("display") && $(".navbar-toggle").trigger("click"), $("html, body").animate({
+            scrollTop: $(b).offset().top
+        }, 900, function() {
+            window.location.hash = b
+        })
+    })
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    var i = 0;
+    var images = ['/imagenes/fondo3.jpg', '/imagenes/fondo.jpg', '/imagenes/fondo2.jpg', '/imagenes/fondo4.jpg'];
+    var image = $('.third');
+
+    setInterval(function() {
+	if(image.css('visibility') != 'hidden') {
+		image.fadeOut(1000, function() {
+		    image.css('background-image', 'url(' + images[i++] + ')');
+		    image.fadeIn(1000);
+		});
+		if (i == images.length)
+		    i = 0;
+	}
+    }, 5000);
+
+
+});
+		</script>
+	  </body>
 </html>
