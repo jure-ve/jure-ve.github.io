@@ -1,170 +1,329 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y me encanta escribir código.">
-  <meta name="keywords" content="jure,jureve,desarrollador,programacion,web,php,python,javascript,aplicaciones,moviles, base de datos,analisis,linux">
-  <meta name="author" content="Jure">
-  <link rel="canonical" href="https://jure.org.ve/">
-  <link rel="icon" type="image/x-icon" href="./imagenes/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./imagenes/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="./imagenes/favicon-96x96.png" />
-  <meta name="robots" content="all" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@jure_ve">
-  <meta name="twitter:creator" content="@jure_ve">
-  <meta name="twitter:title" content="Julio R. Reyes G. ">
-  <meta name="twitter:description" content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y amo escribir código.">
-  <meta name="twitter:image" content="https://jure.org.ve/imagenes/jure-card.jpg">
-  <title>Julio R. Reyes G.</title>
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-  <style>
-  /*
-   * Globals
-   */
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y me encanta escribir código." />
+    <meta name="keywords"
+        content="jure,jureve,desarrollador,programacion,web,php,python,javascript,aplicaciones,moviles, base de datos,analisis,linux" />
+    <meta name="author" content="Jure" />
+    <link rel="canonical" href="https://jure.org.ve/" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
+    <meta name="robots" content="all" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@jure_ve" />
+    <meta name="twitter:creator" content="@jure_ve" />
+    <meta name="twitter:title" content="Julio R. Reyes G. " />
+    <meta name="twitter:description"
+        content="Me llamo Julio R. Reyes G., soy desarrollador venezolano, me apasionan las nuevas tecnologias y amo escribir código." />
+    <meta name="twitter:image" content="https://jure.org.ve/images/jure-card.jpg" />
+    <title>Julio R. Reyes G.</title>
+    <style>
+        @import url("/assets/build/css/bootstrap.min.css");
 
-  /* Links */
-  a,
-  a:focus,
-  a:hover {
-    color: #fff;
-  }
+        .nav-jurehead .nav-link {
+            padding: .25rem 0;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .5);
+            background-color: transparent;
+            border-bottom: .25rem solid transparent;
+        }
 
-  /* Custom default button */
-  .btn-secondary,
-  .btn-secondary:hover,
-  .btn-secondary:focus {
-    color: #333;
-    text-shadow: none; /* Prevent inheritance from `body` */
-    background-color: #fff;
-    border: 8px solid #fff;
-  }
+        .nav-jurehead .nav-link:hover,
+        .nav-jurehead .nav-link:focus {
+            border-bottom-color: rgba(255, 255, 255, .25);
+        }
 
+        .nav-jurehead .nav-link+.nav-link {
+            margin-left: 1rem;
+        }
 
-  /*
-   * Base structure
-   */
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: #333;
+            text-shadow: none;        
+        }
 
-  html,
-  body {
-    height: 100%;
-    background-color: #001f3f;
-  }
+        .card {
+            border-style: none;
+        }
 
-  body {
-    display: -ms-flexbox;
-    display: flex;
-    color: #fff;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  }
+        .card-header {
+            border-bottom: none;
+        }
 
-  .cover-container {
-    max-width: 672px;
-  }
+        .list-group-item {
+            background-color: #212529;
+            color: white;
+            border-style: none;
+        }
 
+        #btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
 
-  /*
-   * Header
-   */
-  .masthead {
-    margin-bottom: 32px;
-  }
-
-  .masthead-brand {
-    margin-bottom: 0;
-  }
-
-  .page-heading {
-    padding: 32px 0;
-  }
-
-  .nav-masthead .nav-link {
-    padding: 4px 0;
-    font-weight: 700;
-    color: rgba(255, 255, 255, .5);
-    background-color: transparent;
-    border-bottom: 4px solid transparent;
-  }
-
-  .nav-masthead .nav-link:hover,
-  .nav-masthead .nav-link:focus {
-    border-bottom-color: rgba(255, 255, 255, .25);
-  }
-
-  .nav-masthead .nav-link + .nav-link {
-    margin-left: 16px;
-  }
-
-  .nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
-  }
-
-  @media (min-width: 768px) {
-    .masthead-brand {
-      float: left;
-    }
-    .nav-masthead {
-      float: right;
-    }
-  }
-  /*
-   * Cover
-   */
-  .cover {
-    padding: 15px;
-  }
-  /*
-   * Footer
-   */
-  .mastfoot {
-    color: rgba(255, 255, 255, .5);
-  }
-
-  </style>
+        @media (min-width: 960px) {
+            .jure-container {
+                max-width: 75%;
+            }
+        }
+    </style>
 </head>
-<body class="text-center">
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">Jure</h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="/">Home</a>
-        </nav>
-      </div>
-    </header>
-    <main role="main" class="inner cover">
-      <h3 class="page-heading">Julio R. Reyes G.</h3>
-      <div class="row">
-        <div class="col-md-6 align-self-center">
-          <p> <img src="/imagenes/jure-gray.jpg" class="rounded-circle" alt="Jure"></p>
-        </div>
-        <div class="col-md-6 align-self-center">
-          <p>Soy desarrollador de Aplicaciones. Este es mi sitio personal.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <p>También puedes encontrarme en <a href="https://ve.linkedin.com/in/julioreyes" itemprop="url" title="linkedin de Julio R. Reyes G." data-toggle="tooltip"><i class="fa fa-linkedin"></i></a></p>
-        </div>
-      </div>
-    </main>
 
+<body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="jure-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Julio R. Reyes G.</h3>
+                <nav class="nav nav-jurehead justify-content-center float-md-end">
+                    <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                    <a class="nav-link" href="#skills">Habilidades</a>
+                    <a class="nav-link" href="#contact" data-bs-toggle="modal" data-bs-target="#contact">Contacto</a>
+                </nav>
+            </div>
+        </header>
 
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p>&copy; 2005 - 2019 Desarrollado por <span><a href="https://jure.org.ve/" title="Julio R. Reyes G." data-toggle="tooltip">Julio R. Reyes G.</a></span> con <i class="fa fa-heart" title="cariño" data-toggle="tooltip"></i>, <i class="fa fa-keyboard-o" title="código" data-toggle="tooltip"></i> y <i class="fa fa-coffee" title="café" data-toggle="tooltip"></i>
-<br/> Hospedado en <a href="https://pages.github.com/" title="GitHub Pages" data-toggle="tooltip">GitHub Pages</a></p>
-      </div>
-    </footer>
-  </div>
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/popper.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
+        <main class="px-3">
+            <div class="p-2 mb-4 text-white bg-dark rounded-3">
+                <div class="container-fluid py-3">
+                    <picture class="my-5">
+                        <source srcset="/images/jure-comic-min.webp" type="image/webp">
+                        <img src="/images/jure-comic-min.png" width="128" height="128" alt="jure">
+                    </picture>
+                    <h1 class="display-5 fw-bold">Hola, me llamo Julio R.</h1>
+                    <p class="col-md-12 fs-4">Desarrollador full-stack y sysadmin con amplio conocimiento de las
+                        técnicas de desarrollo web y sistemas operativos. Experiencia en integración de código,
+                        resolución de problemas, usabilidad y estándares web.</p>
+                </div>
+            </div>
+        </main>
+
+        <div id="skills" class="skills py-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="card text-white bg-dark" style="width:100%">
+                            <div class="card-header">
+                                <img src="/images/binary-code-min.png" width="64" height="64"
+                                    alt="desarrollador full-stack">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Desarrollador full-stack</h2>
+                                <ul class="card-text list-group list-group-flush">
+                                    <li class="list-group-item">Desarrollo web front-end y back-end</li>
+                                    <li class="list-group-item">Integración de código</li>
+                                    <li class="list-group-item">Solución de problemas</li>
+                                    <li class="list-group-item">Usabilidad y estándares web</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="card text-white bg-dark" style="width:100%">
+                            <div class="card-header">
+                                <img src="/images/servers-min.png" width="64" height="64" alt="Sysadmin">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Sysadmin</h2>
+                                <ul class="card-text list-group list-group-flush">
+                                    <li class="list-group-item">Instalación, configuración, gestión, monitoreo, respaldo
+                                        y migración de S.O. y servidores</li>
+                                    <li class="list-group-item">Proyecto e implementación de soluciones de
+                                        infraestructura de TI complejas</li>
+                                    <li class="list-group-item">Automatización de tareas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="card text-white bg-dark" style="width:100%">
+                            <div class="card-header">
+                                <img src="/images/business-meeting-min.png" width="64" height="64"
+                                    alt="Habilidades complementarias">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Habilidades complementarias</h2>
+                                <ul class="card-text list-group list-group-flush">
+                                    <li class="list-group-item">Aprendizaje y desarrollo continuos</li>
+                                    <li class="list-group-item">Trabajo en equipoo</li>
+                                    <li class="list-group-item">Comunicación efectiva</li>
+                                    <li class="list-group-item">Orientación a la mejora continua</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-start text-dark bg-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="popupModalLabel">Formulario de Contacto</h5>
+                        <button type="button" class="btn-close text-white-50" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contact_form" name="contact_form" class="needs-validation"
+                            action="https://formspree.io/f/xpzvqapg" method="post" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Su nombre"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Indique su nombre
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="nombre@correo.com" required>
+                                <div class="invalid-feedback">
+                                    Indique un correo válido
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                    placeholder="+58-404-0000000" required>
+                                <div class="invalid-feedback">
+                                    Indique un número de teléfono
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                <div class="invalid-feedback">
+                                    Indique su duda, sugerencia y/o comentario
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Formulario contacto</strong>
+                    <small>hace unos segundos</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div id="my-form-status" class="toast-body text-dark"></div>
+            </div>
+        </div>
+
+        <footer class="mt-auto text-white-50">
+            <p>
+                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSIwLjA4OSAwLjE1MDggNTEuNTkzMSAzMS42NTUyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0ibWF0cml4KDEsIDAsIDAsIDEsIC0xNi4zNDAyMDgwNTM1ODg4NjcsIC0yNjQuODUxOTI4NzEwOTM3NSkiPgogICAgPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I2ZhZmFmYTtzdHJva2Utd2lkdGg6MC40NzA4Nzk1NTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eTowLjk4MDM5MjE2IiBkPSJNIDE2LjQyOTIwNywyODguNjgzMTYgQyAzNC41NzAwMDEsMjgxLjI3NjA5IDUzLjExMzIzMiwyNzMuMzA5MzIgNjcuOTA1ODYsMjcwLjU1ODcyIiBpZD0icGF0aDM0MjEiLz4KICAgIDxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNmYWZhZmE7c3Ryb2tlLXdpZHRoOjAuNDcwODc5NTU7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MC45ODAzOTIxNiIgZD0iTSA1Mi4wNzg3ODMsMjk2LjY1NzkyIDQxLjk3MDM3OCwyNjcuMDQ4OTQgYyAtNy4zMjg4MDMsMS43NDczMSAtMTMuOTA1MTQ1LDguMTAzNTUgLTE0LjM3MDg4OSwxMS41OTUwNSA1LjIwMjc3NywtMC4xMzE2MiA2LjQ4NzM2NCwtMC4yMjEwMSAxMi4yMDIyOTgsLTAuNDI1NzYiIGlkPSJwYXRoNDIyMyIvPgogICAgPHBhdGggc3R5bGU9ImZpbGw6bm9uZTtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I2ZhZmFmYTtzdHJva2Utd2lkdGg6MC40NzA4ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eTowLjk4MDM5MjE2IiBkPSJtIDQxLjk3MDM3OCwyNjcuMDQ4OTQgYyAxMS41NjY5NjgsLTQuMzIxNDkgMjEuMzE5OTAzLC0yLjE1MjA3IDMuOTQ3Mzg2LDkuOTE2NjIgbCAyMi4xMDQ1MDMsMi44NjEzIiBpZD0icGF0aDQyMjUiLz4KICA8L2c+Cjwvc3ZnPg=="
+                    class="rounded mx-auto d-block" width="64" height="64" alt="jure">
+            </p>
+            <p>
+                &copy; 2005 - 2024 Desarrollado por
+                <span>
+                    <a href="https://jure.org.ve/" title="Julio R. Reyes G." class="text-white-50">Julio R. Reyes
+                        G.</a>
+                </span>
+                con
+                <span title="cariño">💙</span>,
+                <span title="código">⌨</span>
+                y <span title="café">☕</span>
+                <br />
+                Hospedado en
+                <a href="https://pages.github.com/" title="GitHub Pages" class="text-white-50">GitHub Pages</a>
+            </p>
+        </footer>
+    </div>
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <span class="fw-bold">&#8593;</span>
+    </button>
 </body>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+(() => {
+    'use strict';
+
+    const contactForm = document.getElementById("contact_form");
+    const status = document.getElementById("my-form-status");
+    const toastEl = document.getElementById("liveToast");
+    const toast = new bootstrap.Toast(toastEl);
+    const contactModalEl = document.getElementById("contact");
+    const contactModal = new bootstrap.Modal(contactModalEl);
+    const validationForms = document.querySelectorAll('.needs-validation');
+    const backToTopButton = document.getElementById("btn-back-to-top");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const data = new FormData(event.target);
+
+        try {
+            const response = await fetch(event.target.action, {
+                method: event.target.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                status.innerHTML = "¡Gracias por contactarme! En breve te contestaré.";
+                contactForm.reset();
+            } else {
+                const responseData = await response.json();
+                if (responseData.hasOwnProperty('errors')) {
+                    status.innerHTML = responseData["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    status.innerHTML = "¡Ups! Hubo un problema al enviar su formulario";
+                }
+            }
+        } catch (error) {
+            status.innerHTML = "¡Ups! Hubo un problema al enviar su formulario";
+        }
+
+        toast.show();
+        contactModal.hide();
+    }
+
+    contactForm.addEventListener('submit', event => {
+        if (!contactForm.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            handleSubmit(event);
+        }
+        contactForm.classList.add('was-validated');
+    }, false);
+
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    backToTopButton.addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+})();
+</script>
+
 </html>
