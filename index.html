@@ -271,48 +271,59 @@
         const contactModalEl = document.getElementById("contact");
         const contactModal = new bootstrap.Modal(contactModalEl);
         const backToTopButton = document.getElementById("btn-back-to-top");
+        const submitBtn = contactForm?.querySelector('button[type="submit"]');
 
         async function handleSubmit(event) {
             event.preventDefault();
             event.stopPropagation();
             const data = new FormData(event.target);
+
             try {
+                submitBtn.disabled = true; // Deshabilitar botón
                 const response = await fetch(event.target.action, {
                     method: event.target.method,
                     body: data,
                     headers: { 'Accept': 'application/json' }
                 });
+
                 if (response.ok) {
                     status.textContent = "¡Gracias por contactarme! En breve te contestaré.";
                     contactForm.reset();
-                    toast.show();
                     contactModal.hide();
                 } else {
-                    const { errors } = await response.json();
-                    status.textContent = errors?.map(error => error.message).join(", ") || "¡Ups! Hubo un problema al enviar su formulario";
-                    toast.show();
+                    const json = await response.json().catch(() => ({}));
+                    status.textContent = json.errors?.map(e => e.message).join(", ") || "Error inesperado";
                 }
-            } catch (e) {
-                status.textContent = "¡Error! No se pudo conectar con el servidor.";
                 toast.show();
+            } catch (e) {
+                status.textContent = e instanceof SyntaxError
+                    ? "Error en la respuesta del servidor"
+                    : "¡Error de conexión!";
+                toast.show();
+            } finally {
+                submitBtn.disabled = false; 
             }
         }
 
-        contactForm.addEventListener('submit', event => {
+        contactForm?.addEventListener('submit', event => {
+            event.preventDefault();
             if (!contactForm.checkValidity()) {
-                event.preventDefault();
                 event.stopPropagation();
             } else {
                 handleSubmit(event);
             }
             contactForm.classList.add('was-validated');
-        }, false);
+        });
+
+        contactModalEl?.addEventListener('hidden.bs.modal', () => {
+            contactForm.classList.remove('was-validated');
+        });
 
         window.onscroll = () => {
             backToTopButton.style.display = window.pageYOffset > 20 ? "block" : "none";
         };
 
-        backToTopButton.addEventListener("click", () => {
+        backToTopButton?.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
