@@ -2,3 +2,4 @@ User-Agent: *
 Disallow: 
 
 Sitemap: https://juredev.com/sitemap.xml
+Sitemap: https://juredev.com/blog/post-sitemap.xml
